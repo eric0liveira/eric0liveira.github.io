@@ -1,0 +1,107 @@
+---
+layout: post
+title:  "Python - Linguagem de Programação"
+date:   2018-06-20 16:56:00 -0300
+categories: dev
+author: eric0liveira
+comments: true
+---
+
+1. [Introdução][introduction]
+1. [Configuração do Ambiente][config_env]
+1. [Primeiros Passos][first_step]
+
+## Introdução {#introduction}
+
+Python é uma linguagem de programação interpretada de alto nível para programação de propósito geral. Criado por Guido Van Rossum e lançada pela primeira vez em 1991, Python tem uma filosofia de design que enfatiza a legitibilidade do código, notavelmente usando espaço em branco significativo. Ela fornece construções que permitem uma programação clara em escalas pequenas e grandes.[^1]
+
+## Configuração do Ambiente {#config_env}
+
+Realize a instalação do Python 3.
+Para SO Windows e Mac OX X acessem `https://www.python.org/downloads/`.
+O Python 3 já vem instalado por padrão no SO Linux. Execute o comando abaixo para verificar a existência, ou não, do Python 3.
+
+{% highlight bash %}
+$ python3 -v
+{% endhighlight %}
+
+Se não estiver instalado, execute o comando abaixo para instalar em SO Linux baseado em Debian.
+
+{% highlight bash %}
+$ sudo apt-get install python3.6
+{% endhighlight %}
+
+## Primeiros Passos {#first_step}
+
+O Python é uma linguagem de tipagem dinâmica, ou seja, não precisamos definir o tipo de um variável no momento da usa criação, pois este tipo irá depender do conteúdo que essa variável irá armazenar. Por exemplo: se criamos uma variável e inserimos nela um valor numérico, logo, essa variável possuirá seu tipo numérico.
+
+O Python possui alguns tipos nativos, que são:
+
+- **int:** Números inteiros;
+- **str:** Cadeias de caracteres;
+- **bool:** Dados booleano (true ou false);
+- **list:** Estrutura de dados para armazenamento do conjunto de elementos;
+- **dict:** Dicionários;
+- **files:** Arquivos.
+
+### String
+
+String é uma sequência de caracteres que é utilizada para armazenar informações textuais ou coleções de bytes.
+Por considerar uma string como uma sequência de caracteres, o Python armazena os valores de uma string separados por posição.
+Para obter qualquer caractere de uma string, basta acessar a posição do caractere que desejarmos.
+
+{% highlight python %}
+palavra = "python"
+print(palavra[3]) #h
+{% endhighlight %}
+
+Para concatenar strings utilizamos o operador `+`
+
+{% highlight python %}
+palavra = "python"
+palavra = palavra + "versão 3"
+{% endhighlight %}
+
+### Indentação
+
+O Python é uma linguagem que possui indentação por espaços, ou seja, se quisermos definir um bloco de código dentro de uma determinada instrução, devemos adicionar um nível de indentação em todo este bloco de código. Por exemplo, se quisermos imprimir uma determinada mensagem a depender do resultado de uma estrutura condicional, o código ficaria da seguinte forma:
+
+{% highlight python %}
+if (variavel == 5):
+    print("codigo indentado")
+{% endhighlight %}
+
+Dessa forma a frase "codigo indentado" será exibida se a `variavel` for igual a 5.
+
+## Operadores de Atribuição
+
+A atribuição é a forma em que se define um valor referente a determinada variável. No Python, como em várias outras linguagens de programação, a atribuição é dada da seguinte forma: a variável a esquerda recebe o valor definido a direita, sendo separado pelo sinal de igual `=`, como pode ser visto abaixo:
+
+{% highlight python %}
+x = 10
+{% endhighlight %}
+
+Por possuir tipagem dinâmica, não é necessário definir o tipo da variável que é criada no Python, essa informação será definida a partir do valor que a variável recebe. Por exemplo, se uma variável recebe um valor inteiro, logo seu tipo será `int`. Já uma variável que recebe uma cadeia de caracteres terá seu tipo definido como `string`.
+
+Para descobrir o tipo de um variável, utilizamos o método `type`, como pode ser visto abaixo:
+
+{% highlight python %}
+x = 10
+y = "Teste"
+print(type(x))
+print(type(y))
+{% endhighlight %}
+
+Saída
+
+{% highlight bash %}
+<class 'int'>
+<class 'str'>
+{% endhighlight %}
+
+____________________________
+[introduction]:#introduction
+[config_env]:#config_env
+[first_step]:#first_step
+
+[^1]: `https://en.wikipedia.org/wiki/Python_(programming_language)`

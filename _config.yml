@@ -16,11 +16,15 @@
 title: Eric Rodrigues
 email: eric.erikito@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Esse é um blog minimalista criado para compatilhar os meus estudos em diversas áreas.
+  Esse é um blog minimalista criado para compartilhar os meus estudos em diversas áreas.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://eric0liveira.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: eric0liveira
 github_username:  eric0liveira
+linkedin_username: eric0liveira
+
+disqus:
+  shortname: eric0liveira
 
 # Build settings
 markdown: kramdown
