@@ -18,8 +18,8 @@ Python é uma linguagem de programação interpretada de alto nível para progra
 ## Configuração do Ambiente {#config_env}
 
 Realize a instalação do Python 3.
-Para SO Windows e Mac OX X acessem `https://www.python.org/downloads/`.
-O Python 3 já vem instalado por padrão no SO Linux. Execute o comando abaixo para verificar a existência, ou não, do Python 3.
+Para Windows e Mac OS X acessem `https://www.python.org/downloads/`.
+O Python 3 já vem instalado por padrão no Linux. Execute o comando abaixo para verificar a existência, ou não, do Python 3.
 
 {% highlight bash %}
 $ python3 -v
@@ -73,7 +73,7 @@ if (variavel == 5):
 
 Dessa forma a frase "codigo indentado" será exibida se a `variavel` for igual a 5.
 
-## Operadores de Atribuição
+### Operadores de Atribuição
 
 A atribuição é a forma em que se define um valor referente a determinada variável. No Python, como em várias outras linguagens de programação, a atribuição é dada da seguinte forma: a variável a esquerda recebe o valor definido a direita, sendo separado pelo sinal de igual `=`, como pode ser visto abaixo:
 
@@ -98,6 +98,40 @@ Saída
 <class 'int'>
 <class 'str'>
 {% endhighlight %}
+
+#### Atribuição Múltipla
+
+Para realizar a atribuição múltipla, usa-se a seguinte sintaxe.
+
+{% highlight python %}
+nome, sobrenome, idade = "Eric", "Rodrigues", 30
+{% endhighlight %}
+
+### Lendo entrada do teclado
+
+Usamos o comando `input()` para capturar o que é digitado pelo usuário e armazenar em um variável.
+
+{% highlight python %}
+nome = input("Digite seu nome: ")
+{% endhighlight %}
+
+## Operadores Aritméticos
+
+O Python dispõe de vários operadores aritméticos para a realização de cálculos matemáticos. Estes operadores são utilizados para realizar operações entre dois ou mais valores, tendo sua estrutura definida da seguinte forma:
+
+`variável (ou valor) [operador aritmético] variável (ou valor)`
+
+Os operadores aritméticos podem ser vistos abaixo:
+
+| Operação                  | Operador  | Exemplo   |
+| :---:                     | :---:     | :---:     |
+| Adição                    | +         | x + y     |
+| Subtração                 | -         | x - y     |
+| Multiplicação             | *         | x * y     |
+| Divisão                   | /         | x / y     |
+| Exponenciação             | **        | x ** y    |
+| Parte inteira da divisão  | //        | x // y    |
+| Módulo (resto da divisão) | %         | X % y     |
 
 ____________________________
 [introduction]:#introduction
