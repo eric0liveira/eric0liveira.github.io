@@ -13,7 +13,7 @@ comments: true
 
 ## Introdução {#introduction}
 
-Python é uma linguagem de programação interpretada de alto nível para programação de propósito geral. Criado por Guido Van Rossum e lançada pela primeira vez em 1991, Python tem uma filosofia de design que enfatiza a legitibilidade do código, notavelmente usando espaço em branco significativo. Ela fornece construções que permitem uma programação clara em escalas pequenas e grandes.[^1]
+Python é uma linguagem de programação interpretada de alto nível para programação de propósito geral. Criado por Guido Van Rossum e lançada pela primeira vez em 1991, Python tem uma filosofia de design que enfatiza a legitibilidade do código, notavelmente usando espaço em branco significativo. Ela fornece construções que permitem uma programação clara em escalas pequenas e grandes.
 
 ## Configuração do Ambiente {#config_env}
 
@@ -131,11 +131,25 @@ Os operadores aritméticos podem ser vistos abaixo:
 | Divisão                   | /         | x / y     |
 | Exponenciação             | **        | x ** y    |
 | Parte inteira da divisão  | //        | x // y    |
-| Módulo (resto da divisão) | %         | X % y     |
+| Módulo (resto da divisão) | %         | x % y     |
+
+### Precedência dos operadores
+
+Assim como na matemática, alguns operadores aritméticos possuem precedência sobre outros. Essa precedência faz com que alguns cálculos tenham prioridade e são executados primeiro, como no exemplo abaixo:
+
+{% highlight python %}
+print(10 + 2 * 4)
+{% endhighlight %}
+
+Neste caso, a multiplicação tem precedência sobre a adição. A multiplicação será feita primeira e seu resultado será somado com o valor 10, resultando em 18.
+
+Porém, se quiséssemos que uma operação seja feita primeiro, independentemente de seu nível de precedência, podemos utilizar os parênteses para definir a precedência, como no exemplo abaixo, no qual será somado os valores 10 e 2 para então multiplicar por 4:
+
+{% highlight python %}
+print((10 + 2) * 4)
+{% endhighlight %}
 
 ____________________________
 [introduction]:#introduction
 [config_env]:#config_env
 [first_step]:#first_step
-
-[^1]: `https://en.wikipedia.org/wiki/Python_(programming_language)`
