@@ -22,6 +22,7 @@ url: "https://eric0liveira.github.io" # the base hostname & protocol for your si
 twitter_username: eric0liveira
 github_username:  eric0liveira
 linkedin_username: eric0liveira
+google_analytics: UA-76986452-2
 
 disqus:
   shortname: eric0liveira
