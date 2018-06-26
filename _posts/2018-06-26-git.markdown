@@ -137,3 +137,11 @@ Limpa o stash sem aplicá-lo no diretório de trabalho (working directory)
 ```bash
 $ git stash drop
 ```
+
+## Modelo de Ramificação no Git
+
+Lista todos as ramificações (branches) no repositório local. Com `-a` mostra todos os branches.
+
+```bash
+$ git branch [-a]
+```
