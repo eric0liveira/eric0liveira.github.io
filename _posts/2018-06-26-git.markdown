@@ -1,0 +1,141 @@
+---
+layout: post
+title:  "Git - Sistema de Controle de Versão"
+date:   2018-06-26 15:00:00 -0300
+categories: dev
+author: eric0liveira
+comments: true
+---
+
+https://about.gitlab.com/images/press/git-cheat-sheet.pdf
+
+## Instalação
+
+Para distribuições GNU/Linux o Git deve estar disponível no repositório padrão do sistema. Por exemplo, no Debian / Ubuntu, por favor digite o terminal:
+
+```bash
+$ sudo apt-get install git
+```
+
+Se você quiser ou precisar instalar o Git, você pode obtê-lo em <https://git-scm.com/downloads>.
+Um excelente curso de Git pode ser encontrado no livro Pro Git de Scott Chacon e Ben Straub. O livro está disponível online gratuitamente em <https://git-scm.com/book/pt-br/v2>.
+
+## Configuração
+
+Define o nome que será anexado aos seus commits e tags
+
+``` bash
+$ git config --global user.name "Seu Nome"
+```
+
+Define o e-mail que será anexado aos seus commits e tags
+
+``` bash
+$ git config --global user.email "voce@exemplo.com"
+```
+
+Habilita alguma colorização da saída Git
+
+``` bash
+$ git config --global color.ui auto
+```
+
+Gera a sua chave pública SSH
+
+```bash
+$ ssh-keygen
+```
+
+## Iniciando um Projeto
+
+Criando um novo repositório local. Se **[nome projeto]** for fornecido, o Git criará um novo diretório chamado **[nome projeto]** e inicializará um repositório dentro dele. Se **[nome projeto]** não for fornecido, um novo repositório será inicializado no diretório atual.
+
+```bash
+$ git init [nome projeto]
+```
+
+Realiza o download de um projeto com histórico inteiro do repositório remoto.
+
+```bash
+$ git clone [url projeto]
+```
+
+### Ignorando Arquivos
+
+Graças a este arquivo o Git irá ignorar todos os arquivos no diretório **logs** (excluindo o arquivo **.gitkeep**), diretório **tmp** inteiro e todos os arquivos __*.swp__. A ignoramento do arquivo descrito funcionará para o diretório (e para os diretórios filhos) onde o arquivo **.gitignore** é colocado.
+
+```bash
+$ cat .gitignore
+/logs/*
+!logs/.gitkeep
+/tmp
+*.swp
+```
+
+## Trabalho do Dia-a-Dia
+
+Visualiza o status do seu trabalho. Novos arquivos, arquivos modificados. Branch atual.
+
+```bash
+$ git status
+```
+
+Exibe as mudanças entre o diretório de trabalho (working directory) e a área de preparação (staging area).
+
+```bash
+$ git diff [file]
+```
+
+Exibe as mudanças entre a área de preparação (staging area) e o índece (index) (status confirmado do repositório).
+
+```bash
+$ git diff --staged [file]
+```
+
+Descarta as alterações no diretório de trabalho (working directory). Esta operação é irrecuperável.
+
+```bash
+$ git checkout -- [file]
+```
+
+Adiciona um arquivo à área de preparação (staging area). Usar `.` em vez do caminho completo do arquivo para adicionar todos os arquivos de alterações do diretório atual na árvore de diretórios.
+
+```bash
+$ git add [file]
+```
+
+Retorna o arquivo da área temporária (staging area) para o diretório de trabalho (working directory).
+
+```bash
+$ git reset [file]
+```
+
+Cria um novo commit da mudança adicionada à área de preparação (staging area). O commit deve ter uma messagem.
+
+```bash
+$ git commit
+```
+
+Remove o arquivo do diretório de trabalho (working directory) e adiciona a exclusão à área de preparação (staging area).
+
+```bash
+$ git rm [file]
+```
+
+Coloque a suas alterações atuais no stash
+
+```bash
+$ git stash
+```
+
+Aplica o conteúdo armazemado no stash para o diretório de trabalho (working directory) e limpa o stash
+
+```bash
+$ git stash pop
+```
+
+Limpa o stash sem aplicá-lo no diretório de trabalho (working directory)
+
+```bash
+$ git stash drop
+```

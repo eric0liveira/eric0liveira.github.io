@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "MySQL - Banco de Dados"
+date:   2018-06-26 10:00:00 -0300
+categories: dev sql
+author: eric0liveira
+comments: true
+---
+
+## Acesso Remoto
+
+Acessando o MySQL remotamente utilizando ssh informando o `usuario`, `ip` e uma porta `-p 1234`
+
+```bash
+$ ssh usuario@ip -p 1234
+```
+
+## Criando e Restaurando um Dump
+
+Um dump de banco de dados contém um registro da estrutura de tabela e ou dados de um banco de dados.
+
+Criando um dump do banco de dados `bd_origem` para o arquivo `dump.sql`
+
+```bash
+$ mysqldump -h localhost -uroot -p bd_origem > dump.sql
+Enter password:
+```
+
+Restaurando um dump do arquivo `dump.sql` para o banco de dados `db_destino`
+
+```bash
+$ mysql -h localhost -u root -p bd_destino < dump.sql
+Enter password:
+```
+
+Removendo o arquivo de dump do diretório
+
+```bash
+$ rm dump.sql
+```
