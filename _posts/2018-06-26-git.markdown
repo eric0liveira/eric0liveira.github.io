@@ -7,8 +7,6 @@ author: eric0liveira
 comments: true
 ---
 
-https://about.gitlab.com/images/press/git-cheat-sheet.pdf
-
 ## Instalação
 
 Para distribuições GNU/Linux o Git deve estar disponível no repositório padrão do sistema. Por exemplo, no Debian / Ubuntu, por favor digite o terminal:
