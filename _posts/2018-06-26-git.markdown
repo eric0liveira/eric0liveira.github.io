@@ -145,3 +145,47 @@ Lista todos as ramificações (branches) no repositório local. Com `-a` mostra 
 ```bash
 $ git branch [-a]
 ```
+
+Cria um novo branch, referenciando o atual `HEAD`
+
+```bash
+$ git branch [nome]
+```
+
+Muda o diretório de trabalho (working directory) para o branch específico. Com `-b` o Git criará o branch especificado, se ele não existir.
+
+```bash
+$ git checkout [-b] [nome]
+```
+
+Junção de um branch especifico [de nome] para o branch atual (aquele em que você está atualmente).
+
+```bash
+$ git merge [de nome]
+```
+
+Remove o branch selecionado, se esse já se encontra mesclado em qualquer outro. Usando `-D` ao invés de `-d` força a exclusão.
+
+```bash
+$ git branch -d [nome]
+```
+
+## Revisando Seu Trabalho
+
+Lista o histórico de commit do branch atual. `-n quantidade` lista os últimos n commits
+
+```bash
+$ git log [-n quantidade]
+```
+
+Exibe uma visão geral com rótulos de referências e gráfico de histórico. Um commit por linha.
+
+```bash
+$ git log --oneline --graph --decorate
+```
+
+Lista de operações (como checkout, commits, etc.) feitas no repositório local.
+
+```bash
+$ git reflog
+```
