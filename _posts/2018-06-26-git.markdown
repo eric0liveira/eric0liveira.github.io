@@ -7,7 +7,17 @@ author: eric0liveira
 comments: true
 ---
 
-## Instalação
+1. [Instalação][installation]
+1. [Configuração][configuration]
+1. [Iniciando um Projeto][starting]
+1. [Trabalho do Dia-a-Dia][day-to-day]
+1. [Modelo de Ramificação no Git][branching]
+1. [Revisando Seu Trabalho][review]
+1. [Marcando Commits Conhecidos][tagging]
+1. [Revertendo Mudanças][reverting]
+1. [Sincronizando Repositórios][synchronizing]
+
+## Instalação {#installation}
 
 Para distribuições GNU/Linux o Git deve estar disponível no repositório padrão do sistema. Por exemplo, no Debian / Ubuntu, por favor digite o terminal:
 
@@ -18,7 +28,7 @@ $ sudo apt-get install git
 Se você quiser ou precisar instalar o Git, você pode obtê-lo em <https://git-scm.com/downloads>.
 Um excelente curso de Git pode ser encontrado no livro Pro Git de Scott Chacon e Ben Straub. O livro está disponível online gratuitamente em <https://git-scm.com/book/pt-br/v2>.
 
-## Configuração
+## Configuração {#configuration}
 
 Define o nome que será anexado aos seus commits e tags
 
@@ -44,7 +54,7 @@ Gera a sua chave pública SSH
 $ ssh-keygen
 ```
 
-## Iniciando um Projeto
+## Iniciando um Projeto {#starting}
 
 Criando um novo repositório local. Se **[nome projeto]** for fornecido, o Git criará um novo diretório chamado **[nome projeto]** e inicializará um repositório dentro dele. Se **[nome projeto]** não for fornecido, um novo repositório será inicializado no diretório atual.
 
@@ -58,7 +68,7 @@ Realiza o download de um projeto com histórico inteiro do repositório remoto.
 $ git clone [url projeto]
 ```
 
-### Ignorando Arquivos
+### Ignorando Arquivos {#ignoring}
 
 Graças a este arquivo o Git irá ignorar todos os arquivos no diretório **logs** (excluindo o arquivo **.gitkeep**), diretório **tmp** inteiro e todos os arquivos __*.swp__. A ignoramento do arquivo descrito funcionará para o diretório (e para os diretórios filhos) onde o arquivo **.gitignore** é colocado.
 
@@ -70,7 +80,7 @@ $ cat .gitignore
 *.swp
 ```
 
-## Trabalho do Dia-a-Dia
+## Trabalho do Dia-a-Dia {#day-to-day}
 
 Visualiza o status do seu trabalho. Novos arquivos, arquivos modificados. Branch atual.
 
@@ -138,7 +148,7 @@ Limpa o stash sem aplicá-lo no diretório de trabalho (working directory)
 $ git stash drop
 ```
 
-## Modelo de Ramificação no Git
+## Modelo de Ramificação no Git {#branching}
 
 Lista todos as ramificações (branches) no repositório local. Com `-a` mostra todos os branches.
 
@@ -170,7 +180,7 @@ Remove o branch selecionado, se esse já se encontra mesclado em qualquer outro.
 $ git branch -d [nome]
 ```
 
-## Revisando Seu Trabalho
+## Revisando Seu Trabalho {#review}
 
 Lista o histórico de commit do branch atual. `-n quantidade` lista os últimos n commits
 
@@ -190,7 +200,7 @@ Lista de operações (como checkout, commits, etc.) feitas no repositório local
 $ git reflog
 ```
 
-## Marcando Commits Conhecidos
+## Marcando Commits Conhecidos {#tagging}
 
 Lista todas as tags
 
@@ -216,7 +226,7 @@ Remove uma tag de um repositório local
 $ git tag -d [nome]
 ```
 
-## Revertendo Mudanças
+## Revertendo Mudanças {#reverting}
 
 Alterna o branch atual para a **referência de destino** e deixa uma diferença como alterações não confirmadas. Quando é usado `--hard`, todas as alterações são descartadas.
 
@@ -230,7 +240,7 @@ Cria um novo commit, revertendo as mudanças do commit especificado. Gera uma **
 $ git revert [commit sha]
 ```
 
-## Sincronizando Repositórios
+## Sincronizando Repositórios {#synchronizing}
 
 Busca alterações no repositório remoto, mas não atualiza os branches de rastreamento.
 
@@ -261,3 +271,13 @@ Envia o branch atual para o repositório remoto.
 ```bash
 $ git push -u [remoto] [branch]
 ```
+
+[installation]:#installation
+[configuration]:#configuration
+[starting]:#starting
+[day-to-day]:#day-to-day
+[branching]:#branching
+[review]:#review
+[tagging]:#tagging
+[reverting]:#reverting
+[synchronizing]:#synchronizing
