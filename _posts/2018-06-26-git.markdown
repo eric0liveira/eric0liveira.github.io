@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git - Sistema de Controle de Versão"
-date:   2018-06-26 15:00:00 -0300
+date:   2018-06-26 20:00:00 -0300
 categories: dev
 author: eric0liveira
 comments: true
@@ -188,4 +188,76 @@ Lista de operações (como checkout, commits, etc.) feitas no repositório local
 
 ```bash
 $ git reflog
+```
+
+## Marcando Commits Conhecidos
+
+Lista todas as tags
+
+```bash
+$ git tag
+```
+
+Cria uma tag de referência **nome** para o commit atual. Adiciona uma tag para hash `commit sha` para marcar um commit específico em vez do atual.
+
+```bash
+$ git tag [nome] [commit sha]
+```
+
+Cria um objeto de tag chamado **nome** para o commit atual
+
+```bash
+$ git tag -a [nome] [commit sha]
+```
+
+Remove uma tag de um repositório local
+
+```bash
+$ git tag -d [nome]
+```
+
+## Revertendo Mudanças
+
+Alterna o branch atual para a **referência de destino** e deixa uma diferença como alterações não confirmadas. Quando é usado `--hard`, todas as alterações são descartadas.
+
+```bash
+$ git reset [--hard] [referência de destino]
+```
+
+Cria um novo commit, revertendo as mudanças do commit especificado. Gera uma **inversão** de mudanças.
+
+```bash
+$ git revert [commit sha]
+```
+
+## Sincronizando Repositórios
+
+Busca alterações no repositório remoto, mas não atualiza os branches de rastreamento.
+
+```bash
+$ git fetch [remoto]
+```
+
+Remove referências remotas que foram removidas do repositório remoto.
+
+```bash
+$ git fetch --prune [remoto]
+```
+
+Busca as mudanças do repositório remoto e mescla com o branch atual.
+
+```bash
+$ git pull [remoto]
+```
+
+Envia as alterações locais para o repositório remoto. Use `--tags` para enviar as tags
+
+```bash
+$ git push [--tags] [remoto]
+```
+
+Envia o branch atual para o repositório remoto.
+
+```bash
+$ git push -u [remoto] [branch]
 ```
