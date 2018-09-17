@@ -1,0 +1,16 @@
+---
+layout: page
+title: Slides
+permalink: /slides/
+---
+         
+  <ul class="post-list">
+    <li>          
+      <span class="post-meta">Sep 28, 2018</span>
+      <h3>
+        <a class="post-link" href="as-tres-leis-kepler/">
+          As 3 Leis de Kepler
+        </a>
+      </h3>          
+    </li>        
+  </ul>
